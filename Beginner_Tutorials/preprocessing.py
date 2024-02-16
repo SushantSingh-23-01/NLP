@@ -7,7 +7,7 @@ from nltk.stem import PorterStemmer
 
 def preprocess(raw_string):
     #raw_string = raw_string.lower()
-    text = re.sub(r'[^A-Za-z0-9 ]+',' ',raw_string) # remove punctuations
+    text = re.sub(r'[^A-Za-z0-9 ]+',' ',raw_string) # remove characters except alpha numeric
     text = re.sub('\s+',' ',text)                   # remove whitespaces
     text = re.sub(r'\n','',text)                    # remove line breaks
     text = re.sub(r'\d+','',text)                   # remove digits
